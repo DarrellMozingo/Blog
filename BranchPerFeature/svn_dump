@@ -1,0 +1,767 @@
+SVN-fs-dump-format-version: 2
+
+UUID: 0dde97db-0415-6a4c-87d5-3c1bdd16e9ed
+
+Revision-number: 0
+Prop-content-length: 56
+Content-length: 56
+
+K 8
+svn:date
+V 27
+2009-11-03T17:55:06.226145Z
+PROPS-END
+
+Revision-number: 1
+Prop-content-length: 130
+Content-length: 130
+
+K 7
+svn:log
+V 18
+Initial structure.
+K 10
+svn:author
+V 16
+VisualSVN Server
+K 8
+svn:date
+V 27
+2009-11-03T17:55:06.676145Z
+PROPS-END
+
+Node-path: branches
+Node-kind: dir
+Node-action: add
+Prop-content-length: 10
+Content-length: 10
+
+PROPS-END
+
+
+Node-path: tags
+Node-kind: dir
+Node-action: add
+Prop-content-length: 10
+Content-length: 10
+
+PROPS-END
+
+
+Node-path: trunk
+Node-kind: dir
+Node-action: add
+Prop-content-length: 10
+Content-length: 10
+
+PROPS-END
+
+
+Revision-number: 2
+Prop-content-length: 118
+Content-length: 118
+
+K 7
+svn:log
+V 15
+Initial import.
+K 10
+svn:author
+V 8
+dmozingo
+K 8
+svn:date
+V 27
+2009-11-03T19:03:39.909145Z
+PROPS-END
+
+Node-path: trunk/BranchPerFeature.sln
+Node-kind: file
+Node-action: add
+Prop-content-length: 10
+Text-content-length: 920
+Text-content-md5: 64b858e220e5ccc3d82cb7b17b5d976d
+Text-content-sha1: 67895bb32e1ac886a670ed00eb0bc33126ff882d
+Content-length: 930
+
+PROPS-END
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{7A08F9A3-56FC-48E1-A98A-49E1C03773C4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A08F9A3-56FC-48E1-A98A-49E1C03773C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A08F9A3-56FC-48E1-A98A-49E1C03773C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A08F9A3-56FC-48E1-A98A-49E1C03773C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A08F9A3-56FC-48E1-A98A-49E1C03773C4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
+
+
+Node-path: trunk/ConsoleApp
+Node-kind: dir
+Node-action: add
+Prop-content-length: 10
+Content-length: 10
+
+PROPS-END
+
+
+Node-path: trunk/ConsoleApp/ConsoleApp.csproj
+Node-kind: file
+Node-action: add
+Prop-content-length: 10
+Text-content-length: 2493
+Text-content-md5: dd6b0e56c647de8003fe577e5ced23a6
+Text-content-sha1: 881f351e611c883dc2aeeeb4eb83ac11874d924b
+Content-length: 2503
+
+PROPS-END
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7A08F9A3-56FC-48E1-A98A-49E1C03773C4}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ConsoleApp</RootNamespace>
+    <AssemblyName>ConsoleApp</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
+
+Node-path: trunk/ConsoleApp/Program.cs
+Node-kind: file
+Node-action: add
+Prop-content-length: 10
+Text-content-length: 179
+Text-content-md5: cef3ead6d0103b4d95e6e66322b18a1a
+Text-content-sha1: 30c63d78245ae08b7adc6b1967fac52eb7bbb460
+Content-length: 189
+
+PROPS-END
+﻿using System;
+
+namespace ConsoleApp
+{
+	internal class Program
+	{
+		private static void Main(string[] args)
+		{
+			Console.WriteLine("Doing sweet stuff...");
+		}
+	}
+}
+
+Node-path: trunk/ConsoleApp/Properties
+Node-kind: dir
+Node-action: add
+Prop-content-length: 10
+Content-length: 10
+
+PROPS-END
+
+
+Node-path: trunk/ConsoleApp/Properties/AssemblyInfo.cs
+Node-kind: file
+Node-action: add
+Prop-content-length: 10
+Text-content-length: 1450
+Text-content-md5: b69b96fc0d958775de890d4b7d422837
+Text-content-sha1: 1bea68fe1111a52d3538b46a1a1069467ad082b5
+Content-length: 1460
+
+PROPS-END
+﻿using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+[assembly: AssemblyTitle("ConsoleApp")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyProduct("ConsoleApp")]
+[assembly: AssemblyCopyright("Copyright © Microsoft 2009")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+
+// Setting ComVisible to false makes the types in this assembly not visible 
+// to COM components.  If you need to access a type in this assembly from 
+// COM, set the ComVisible attribute to true on that type.
+[assembly: ComVisible(false)]
+
+// The following GUID is for the ID of the typelib if this project is exposed to COM
+[assembly: Guid("2ea8a6d7-b6d9-421f-b5ab-d866b816e3d1")]
+
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Build and Revision Numbers 
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]
+
+
+Revision-number: 3
+Prop-content-length: 142
+Content-length: 142
+
+K 7
+svn:log
+V 39
+Branching for "Add user input" feature.
+K 10
+svn:author
+V 8
+dmozingo
+K 8
+svn:date
+V 27
+2009-11-03T19:18:19.103145Z
+PROPS-END
+
+Node-path: branches/AddUserInput
+Node-kind: dir
+Node-action: add
+Node-copyfrom-rev: 2
+Node-copyfrom-path: trunk
+
+
+Revision-number: 4
+Prop-content-length: 149
+Content-length: 149
+
+K 7
+svn:log
+V 46
+Asking for user's name and displaying it back.
+K 10
+svn:author
+V 8
+dmozingo
+K 8
+svn:date
+V 27
+2009-11-03T19:21:12.874145Z
+PROPS-END
+
+Node-path: branches/AddUserInput/ConsoleApp/Program.cs
+Node-kind: file
+Node-action: change
+Text-content-length: 240
+Text-content-md5: 502aa1f026e28883d8f5150483074ff1
+Text-content-sha1: a82ee2299336494a048914abd74c9d535b99c2a1
+Content-length: 240
+
+﻿using System;
+
+namespace ConsoleApp
+{
+	internal class Program
+	{
+		private static void Main(string[] args)
+		{
+			Console.Write("Name ?");
+			var name = Console.ReadLine();
+
+			Console.WriteLine("Hi {0}...", name);
+		}
+	}
+}
+
+Revision-number: 5
+Prop-content-length: 143
+Content-length: 143
+
+K 7
+svn:log
+V 40
+Merging "Add user input" feature branch.
+K 10
+svn:author
+V 8
+dmozingo
+K 8
+svn:date
+V 27
+2009-11-03T19:25:37.444145Z
+PROPS-END
+
+Node-path: trunk
+Node-kind: dir
+Node-action: change
+Prop-content-length: 61
+Content-length: 61
+
+K 13
+svn:mergeinfo
+V 26
+/branches/AddUserInput:3-4
+PROPS-END
+
+
+Node-path: trunk/ConsoleApp/Program.cs
+Node-kind: file
+Node-action: change
+Text-content-length: 240
+Text-content-md5: 502aa1f026e28883d8f5150483074ff1
+Text-content-sha1: a82ee2299336494a048914abd74c9d535b99c2a1
+Content-length: 240
+
+﻿using System;
+
+namespace ConsoleApp
+{
+	internal class Program
+	{
+		private static void Main(string[] args)
+		{
+			Console.Write("Name ?");
+			var name = Console.ReadLine();
+
+			Console.WriteLine("Hi {0}...", name);
+		}
+	}
+}
+
+Revision-number: 6
+Prop-content-length: 155
+Content-length: 155
+
+K 7
+svn:log
+V 52
+Branching for the "prime calculator" feature branch.
+K 10
+svn:author
+V 8
+dmozingo
+K 8
+svn:date
+V 27
+2009-11-03T19:26:56.198145Z
+PROPS-END
+
+Node-path: branches/PrimeCalculator
+Node-kind: dir
+Node-action: add
+Node-copyfrom-rev: 5
+Node-copyfrom-path: trunk
+Prop-content-length: 61
+Content-length: 61
+
+K 13
+svn:mergeinfo
+V 26
+/branches/AddUserInput:3-4
+PROPS-END
+
+
+Revision-number: 7
+Prop-content-length: 123
+Content-length: 123
+
+K 7
+svn:log
+V 20
+Deleting old branch.
+K 10
+svn:author
+V 8
+dmozingo
+K 8
+svn:date
+V 27
+2009-11-03T19:28:50.346145Z
+PROPS-END
+
+Node-path: branches/AddUserInput
+Node-action: delete
+
+
+Revision-number: 8
+Prop-content-length: 126
+Content-length: 126
+
+K 7
+svn:log
+V 23
+Added prime calculator.
+K 10
+svn:author
+V 8
+dmozingo
+K 8
+svn:date
+V 27
+2009-11-03T19:42:27.733145Z
+PROPS-END
+
+Node-path: branches/PrimeCalculator/ConsoleApp/Program.cs
+Node-kind: file
+Node-action: change
+Text-content-length: 745
+Text-content-md5: 499e6a0cd58fda0dc659a11110f79603
+Text-content-sha1: ccd951486a84f7c74af810e26c8274d41297ac4c
+Content-length: 745
+
+﻿using System;
+
+namespace ConsoleApp
+{
+	internal class Program
+	{
+		private static bool isPrime(int number)
+		{
+			if (number < 2)
+			{
+				return false;
+			}
+
+			for (int i = 2; i < number; i++)
+			{
+				if (number % i == 0)
+				{
+					return false;
+				}
+			}
+
+			return true;
+		}
+
+		private static void Main(string[] args)
+		{
+			Console.Write("Number? ");
+			var number = Convert.ToInt32(Console.ReadLine());
+
+			var isPrimeText = isPrime(number)
+			                  	? "It's a prime!"
+			                  	: "Not a prime.";
+
+			Console.WriteLine(isPrimeText + Environment.NewLine);
+
+			Console.Write("Name? ");
+			var name = Console.ReadLine();
+
+			Console.WriteLine("Hi {0}...", name);
+		}
+	}
+}
+
+Revision-number: 9
+Prop-content-length: 133
+Content-length: 133
+
+K 7
+svn:log
+V 30
+Rewording for welcome message.
+K 10
+svn:author
+V 8
+dmozingo
+K 8
+svn:date
+V 27
+2009-11-03T19:45:09.055145Z
+PROPS-END
+
+Node-path: trunk/ConsoleApp/Program.cs
+Node-kind: file
+Node-action: change
+Text-content-length: 242
+Text-content-md5: 2189674a8ce3862ba18efc36e2cacc89
+Text-content-sha1: 7920c6ebf7d030dd3be2bc0b53492b0c12b39fc1
+Content-length: 242
+
+﻿using System;
+
+namespace ConsoleApp
+{
+	internal class Program
+	{
+		private static void Main(string[] args)
+		{
+			Console.Write("Name ?");
+			var name = Console.ReadLine();
+
+			Console.WriteLine("Hello, {0}!", name);
+		}
+	}
+}
+
+Revision-number: 10
+Prop-content-length: 144
+Content-length: 144
+
+K 7
+svn:log
+V 41
+Program won't exit after welcome message.
+K 10
+svn:author
+V 8
+dmozingo
+K 8
+svn:date
+V 27
+2009-11-03T19:46:58.882145Z
+PROPS-END
+
+Node-path: trunk/ConsoleApp/Program.cs
+Node-kind: file
+Node-action: change
+Text-content-length: 266
+Text-content-md5: 96a897b3d78b28b871ba9b61f2db1ba0
+Text-content-sha1: 6244d63f0dabf509a460abef3a173a60448319ab
+Content-length: 266
+
+﻿using System;
+
+namespace ConsoleApp
+{
+	internal class Program
+	{
+		private static void Main(string[] args)
+		{
+			Console.Write("Name ?");
+			var name = Console.ReadLine();
+
+			Console.WriteLine("Hello, {0}!", name);
+			Console.ReadLine();
+		}
+	}
+}
+
+Revision-number: 11
+Prop-content-length: 121
+Content-length: 121
+
+K 7
+svn:log
+V 18
+Merged from trunk.
+K 10
+svn:author
+V 8
+dmozingo
+K 8
+svn:date
+V 27
+2009-11-03T19:52:15.180145Z
+PROPS-END
+
+Node-path: branches/PrimeCalculator
+Node-kind: dir
+Node-action: change
+Prop-content-length: 71
+Content-length: 71
+
+K 13
+svn:mergeinfo
+V 36
+/branches/AddUserInput:3-4
+/trunk:10
+PROPS-END
+
+
+Node-path: branches/PrimeCalculator/ConsoleApp/Program.cs
+Node-kind: file
+Node-action: change
+Text-content-length: 769
+Text-content-md5: ed3e58302538cdb8d63d2841e3574c27
+Text-content-sha1: a66c9e4cb4a08ea1de3939129abc1a7d7294283c
+Content-length: 769
+
+﻿using System;
+
+namespace ConsoleApp
+{
+	internal class Program
+	{
+		private static bool isPrime(int number)
+		{
+			if (number < 2)
+			{
+				return false;
+			}
+
+			for (int i = 2; i < number; i++)
+			{
+				if (number % i == 0)
+				{
+					return false;
+				}
+			}
+
+			return true;
+		}
+
+		private static void Main(string[] args)
+		{
+			Console.Write("Number? ");
+			var number = Convert.ToInt32(Console.ReadLine());
+
+			var isPrimeText = isPrime(number)
+			                  	? "It's a prime!"
+			                  	: "Not a prime.";
+
+			Console.WriteLine(isPrimeText + Environment.NewLine);
+
+			Console.Write("Name? ");
+			var name = Console.ReadLine();
+
+			Console.WriteLine("Hi {0}...", name);
+			Console.ReadLine();
+		}
+	}
+}
+
+Revision-number: 12
+Prop-content-length: 121
+Content-length: 121
+
+K 7
+svn:log
+V 18
+Merged from trunk.
+K 10
+svn:author
+V 8
+dmozingo
+K 8
+svn:date
+V 27
+2009-11-03T19:55:07.593145Z
+PROPS-END
+
+Node-path: branches/PrimeCalculator
+Node-kind: dir
+Node-action: change
+Prop-content-length: 73
+Content-length: 73
+
+K 13
+svn:mergeinfo
+V 38
+/branches/AddUserInput:3-4
+/trunk:6-11
+PROPS-END
+
+
+Node-path: branches/PrimeCalculator/ConsoleApp/Program.cs
+Node-kind: file
+Node-action: change
+Text-content-length: 771
+Text-content-md5: 72c390085a3f88e08fe2e9ffcc85076d
+Text-content-sha1: b8ae01da4e4b05f045934768a1f9d93295d4ff40
+Content-length: 771
+
+﻿using System;
+
+namespace ConsoleApp
+{
+	internal class Program
+	{
+		private static bool isPrime(int number)
+		{
+			if (number < 2)
+			{
+				return false;
+			}
+
+			for (int i = 2; i < number; i++)
+			{
+				if (number % i == 0)
+				{
+					return false;
+				}
+			}
+
+			return true;
+		}
+
+		private static void Main(string[] args)
+		{
+			Console.Write("Number? ");
+			var number = Convert.ToInt32(Console.ReadLine());
+
+			var isPrimeText = isPrime(number)
+			                  	? "It's a prime!"
+			                  	: "Not a prime.";
+
+			Console.WriteLine(isPrimeText + Environment.NewLine);
+
+			Console.Write("Name? ");
+			var name = Console.ReadLine();
+
+			Console.WriteLine("Hello, {0}!", name);
+			Console.ReadLine();
+		}
+	}
+}
+

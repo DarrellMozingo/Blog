@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<project name="MyExtensions" default="build-server" xmlns="http://nant.sf.net/release/0.85/nant.xsd">
+	<property name="build.project" value="MyExtensions" />
+	<property name="build.dir" value="${build.project}\bin" />
+	<property name="build.config" value="Release" />
+	<property name="build.fullPath" value="${build.dir}\${build.config}" />
+	<property name="build.toolPath" value="C:\WINDOWS\Microsoft.NET\Framework\v3.5\msbuild.exe" />
+	<property name="tools.dir" value="${build.project}\Internal\Tools" />
+	<property name="build.testBuildDir" value="${build.project}.UnitTests\bin" />
+	<property name="reports.dir" value="${build.dir}\Reports" />
+	<property name="reports.ncover" value="${reports.dir}\NCover-Report.xml" />
+	<property name="build.outputPath" value="\\fileServer\Assemblies\MyExtensions" />
+
+	<target name="build-server" depends="clean, compile, unitTests, ncoverexplorer-report publishOutput"
+		description="In addition to the normal full build, it copies the solution output to a specified network share." />
+
+	<target name="full-build" depends="clean, compile, unitTests, ncoverexplorer-report"
+		description="Does a full build of the project and runs unit tests with whatever is currently on the machine." />
+
+	<target name="clean" description="Destroys the directory where all assemblies/reports are generated.">
+		<delete 
+			dir="${build.dir}" 
+			if="${directory::exists(property::get-value('build.dir'))}" 
+			failonerror="false" />
+
+		<delete
+			dir="${build.testBuildDir}"
+			if="${directory::exists(property::get-value('build.testBuildDir'))}"
+			failonerror="false" />
+	</target>
+
+	<target name="compile" description="Compiles the project using the MSBuild executable.">
+		<echo message="Using MSBuild to build configuration: ${build.config}" />
+
+		<exec program="${build.toolPath}"
+			commandline="${build.project}.sln /p:Configuration=${build.config} /nologo /noconsolelogger /noautoresponse" />
+	</target>
+
+	<target name="unitTests" description="Runs all needed unit tests with MbUnit and checks coverage with NCover.">
+		<mkdir 
+			dir="${reports.dir}" 
+			unless="${directory::exists(property::get-value('reports.dir'))}" />
+
+		<!--
+				Call NCover, which will call MbUnit to run the tests. While MbUnit runs, NCover does its work.
+
+				- To add additional unit test libraries, add the full path to the unit test DLL at the end of the 
+					commandLineArgs attribute,	separating it with a space and being mindful of the 
+					${build.config} variable. Do NOT wrap this line, as NCover will fail.
+
+				- To add a new assembly you're checking coverage on, add the assembly name at the end of the 
+					assemblyList attribute, separating them with a semi-colon.
+		-->
+		<ncover program="${tools.dir}\NCover\NCover.Console.exe"
+				commandLineExe="${tools.dir}\MbUnit\MbUnit.Cons.exe"
+				coverageFile="${reports.ncover}"
+				logFile="${reports.dir}\NCover-Log.log" 
+				assemblyList="${build.project}" 
+				commandLineArgs="/report-folder:${reports.dir} /report-name-format:MbUnit-Report /report-type:Xml ${build.testBuildDir}\${build.config}\${build.project}.UnitTests.dll" />
+	</target>
+
+	<target name="ncoverexplorer-report" description="Produces a condensed report in XML format from NCover.">
+		<exec program="NCoverExplorer.Console.exe" basedir="${tools.dir}\NCoverExplorer">
+			<arg value="/xml:${reports.dir}\NCoverExplorer-Report.xml" />
+			<arg value="/html:${reports.dir}\NCoverExplorer-Report.html" />
+			<arg value="/project:&quot;${build.project}&quot;" />
+
+			<!-- Minimum coverage for a "passed" test in %. -->
+			<arg value="/minCoverage:95" />
+
+			<!-- Show the highest level of detail in the report. -->
+			<arg value="/report:5" />
+
+			<arg value="${reports.ncover}" />
+		</exec>
+	</target>
+
+	<target name="publishOutput" description="Publishes the solution's output by copying it to a specified directory.">
+		<copy todir="${build.outputPath}" overwrite="true">
+			<fileset basedir="${build.fullPath}">
+				<include name="${build.project}.dll" />
+				<include name="${build.project}.pdb" />
+			</fileset>
+		</copy>
+	</target>
+</project>

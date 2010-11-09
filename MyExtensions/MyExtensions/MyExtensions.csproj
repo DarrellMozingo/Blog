@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{679371D9-3B8D-40D3-A096-2E2AA72CE8FA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyExtensions</RootNamespace>
+    <AssemblyName>MyExtensions</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimpleExtension.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Internal\Tools\CCNet\Category.png" />
+    <Content Include="Internal\Tools\CCNet\Fixture.png" />
+    <Content Include="Internal\Tools\CCNet\MBUnitDetails.xsl" />
+    <Content Include="Internal\Tools\CCNet\NCoverExplorer.xsl" />
+    <Content Include="Internal\Tools\CCNet\NCoverExplorerSummary.xsl" />
+    <Content Include="Internal\Tools\CCNet\Populator.png" />
+    <Content Include="Internal\Tools\CCNet\ReadMe.txt" />
+    <Content Include="Internal\Tools\CCNet\Test.png" />
+    <Content Include="Internal\Tools\MbUnit\log4net.dll" />
+    <Content Include="Internal\Tools\MbUnit\MbUnit.AddIn.dll" />
+    <Content Include="Internal\Tools\MbUnit\MbUnit.Cons.exe" />
+    <Content Include="Internal\Tools\MbUnit\MbUnit.Framework.2.0.dll" />
+    <Content Include="Internal\Tools\MbUnit\MbUnit.Framework.dll" />
+    <Content Include="Internal\Tools\MbUnit\MbUnit.GUI.exe" />
+    <Content Include="Internal\Tools\MbUnit\MbUnit.MSBuild.Tasks.dll" />
+    <Content Include="Internal\Tools\MbUnit\MbUnit.Tasks.dll" />
+    <Content Include="Internal\Tools\MbUnit\NAnt.Core.dll" />
+    <Content Include="Internal\Tools\MbUnit\NGraphviz.dll" />
+    <Content Include="Internal\Tools\MbUnit\NGraphviz.Helpers.dll" />
+    <Content Include="Internal\Tools\MbUnit\NGraphviz.Layout.dll" />
+    <Content Include="Internal\Tools\MbUnit\QuickGraph.Algorithms.dll" />
+    <Content Include="Internal\Tools\MbUnit\QuickGraph.Algorithms.Graphviz.dll" />
+    <Content Include="Internal\Tools\MbUnit\QuickGraph.dll" />
+    <Content Include="Internal\Tools\MbUnit\Refly.dll" />
+    <Content Include="Internal\Tools\MbUnit\TestDriven.Framework.dll" />
+    <Content Include="Internal\Tools\MbUnit\TestFu.dll" />
+    <Content Include="Internal\Tools\NAnt\CollectionGen.dll" />
+    <Content Include="Internal\Tools\NAnt\Interop.MsmMergeTypeLib.dll" />
+    <Content Include="Internal\Tools\NAnt\Interop.StarTeam.dll" />
+    <Content Include="Internal\Tools\NAnt\Interop.WindowsInstaller.dll" />
+    <Content Include="Internal\Tools\NAnt\lib\ICSharpCode.SharpCvsLib.Console.dll" />
+    <Content Include="Internal\Tools\NAnt\lib\ICSharpCode.SharpCvsLib.dll" />
+    <Content Include="Internal\Tools\NAnt\lib\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="Internal\Tools\NAnt\lib\net\2.0\NDoc.Core.dll" />
+    <Content Include="Internal\Tools\NAnt\lib\net\2.0\NDoc.Documenter.Msdn.dll" />
+    <Content Include="Internal\Tools\NAnt\lib\net\2.0\NDoc.ExtendedUI.dll" />
+    <Content Include="Internal\Tools\NAnt\lib\net\2.0\nunit.core.dll" />
+    <Content Include="Internal\Tools\NAnt\lib\net\2.0\nunit.framework.dll" />
+    <Content Include="Internal\Tools\NAnt\lib\net\2.0\nunit.util.dll" />
+    <Content Include="Internal\Tools\NAnt\lib\NUnitCore.dll" />
+    <Content Include="Internal\Tools\NAnt\log4net.dll" />
+    <Content Include="Internal\Tools\NAnt\NAnt.CompressionTasks.dll" />
+    <Content Include="Internal\Tools\NAnt\NAnt.CompressionTasks.xml" />
+    <Content Include="Internal\Tools\NAnt\NAnt.Contrib.Tasks.dll" />
+    <Content Include="Internal\Tools\NAnt\NAnt.Contrib.Tasks.xml" />
+    <Content Include="Internal\Tools\NAnt\NAnt.Core.dll" />
+    <Content Include="Internal\Tools\NAnt\NAnt.Core.xml" />
+    <Content Include="Internal\Tools\NAnt\NAnt.DotNetTasks.dll" />
+    <Content Include="Internal\Tools\NAnt\NAnt.DotNetTasks.xml" />
+    <Content Include="Internal\Tools\NAnt\NAnt.exe" />
+    <Content Include="Internal\Tools\NAnt\NAnt.MSNetTasks.dll" />
+    <Content Include="Internal\Tools\NAnt\NAnt.MSNetTasks.xml" />
+    <Content Include="Internal\Tools\NAnt\NAnt.NUnit.dll" />
+    <Content Include="Internal\Tools\NAnt\NAnt.NUnit.xml" />
+    <Content Include="Internal\Tools\NAnt\NAnt.NUnit1Tasks.dll" />
+    <Content Include="Internal\Tools\NAnt\NAnt.NUnit1Tasks.xml" />
+    <Content Include="Internal\Tools\NAnt\NAnt.NUnit2Tasks.dll" />
+    <Content Include="Internal\Tools\NAnt\NAnt.NUnit2Tasks.xml" />
+    <Content Include="Internal\Tools\NAnt\NAnt.SourceControlTasks.dll" />
+    <Content Include="Internal\Tools\NAnt\NAnt.SourceControlTasks.xml" />
+    <Content Include="Internal\Tools\NAnt\NAnt.VisualCppTasks.dll" />
+    <Content Include="Internal\Tools\NAnt\NAnt.VisualCppTasks.xml" />
+    <Content Include="Internal\Tools\NAnt\NAnt.VSNetTasks.dll" />
+    <Content Include="Internal\Tools\NAnt\NAnt.VSNetTasks.xml" />
+    <Content Include="Internal\Tools\NAnt\NAnt.Win32Tasks.dll" />
+    <Content Include="Internal\Tools\NAnt\NAnt.Win32Tasks.xml" />
+    <Content Include="Internal\Tools\NAnt\NAnt.xml" />
+    <Content Include="Internal\Tools\NAnt\NCoverExplorer.NAntTasks.dll" />
+    <Content Include="Internal\Tools\NAnt\NCoverExplorer.NAntTasks.xml" />
+    <Content Include="Internal\Tools\NAnt\NDoc.Documenter.NAnt.dll" />
+    <Content Include="Internal\Tools\NAnt\scvs.exe" />
+    <Content Include="Internal\Tools\NAnt\SLiNgshoT.Core.dll" />
+    <Content Include="Internal\Tools\NAnt\SLiNgshoT.exe" />
+    <Content Include="Internal\Tools\NAnt\SourceSafe.Interop.dll" />
+    <Content Include="Internal\Tools\NCoverExplorer\ActiproSoftware.Shared.Net11.dll" />
+    <Content Include="Internal\Tools\NCoverExplorer\ActiproSoftware.SyntaxEditor.Net11.dll" />
+    <Content Include="Internal\Tools\NCoverExplorer\ActiproSoftware.WinUICore.Net11.dll" />
+    <Content Include="Internal\Tools\NCoverExplorer\CommandBars.dll" />
+    <Content Include="Internal\Tools\NCoverExplorer\CoverageReport.xsl" />
+    <Content Include="Internal\Tools\NCoverExplorer\NCoverExplorer.Console.exe" />
+    <Content Include="Internal\Tools\NCoverExplorer\NCoverExplorer.Core.dll" />
+    <Content Include="Internal\Tools\NCoverExplorer\NCoverExplorer.exe" />
+    <Content Include="Internal\Tools\NCoverExplorer\NCoverExplorer.NCoverRunner.dll" />
+    <Content Include="Internal\Tools\NCoverExplorer\NCoverExplorer.WinForms.dll" />
+    <Content Include="Internal\Tools\NCoverExplorer\NCoverExplorerFAQ.html" />
+    <Content Include="Internal\Tools\NCover\Coverage.xsl" />
+    <Content Include="Internal\Tools\NCover\CoverLib.dll" />
+    <Content Include="Internal\Tools\NCover\MSVCP80.dll" />
+    <Content Include="Internal\Tools\NCover\MSVCR80.dll" />
+    <Content Include="Internal\Tools\NCover\NCover.Console.exe" />
+    <Content Include="Internal\Tools\NCover\NCover.Framework.dll" />
+    <Content Include="Internal\Tools\NCover\NCoverFAQ.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Internal\Tools\CCNet\ccnet.config" />
+    <None Include="Internal\Tools\CCNet\dashboard.config" />
+    <None Include="Internal\Tools\CCNet\Microsoft.WebApplication.targets" />
+    <None Include="Internal\Tools\CCNet\Subversion-1.5.1.msi" />
+    <None Include="Internal\Tools\MbUnit\MbUnit.Cons.exe.config" />
+    <None Include="Internal\Tools\MbUnit\MbUnit.GUI.exe.config" />
+    <None Include="Internal\Tools\NAnt\MSITaskErrors.mst" />
+    <None Include="Internal\Tools\NAnt\MSITaskTemplate.msi" />
+    <None Include="Internal\Tools\NAnt\MSMTaskErrors.mst" />
+    <None Include="Internal\Tools\NAnt\MSMTaskTemplate.msm" />
+    <None Include="Internal\Tools\NAnt\NAnt.exe.config" />
+    <None Include="Internal\Tools\NAnt\nant.xsd" />
+    <None Include="Internal\Tools\NCoverExplorer\ConsoleConfig.xsd" />
+    <None Include="Internal\Tools\NCoverExplorer\ConsoleExample.config" />
+    <None Include="Internal\Tools\NCoverExplorer\NCoverExplorer.exe.config" />
+    <None Include="Internal\Tools\NCover\Microsoft.VC80.CRT.manifest" />
+    <None Include="Internal\Tools\NCover\NCover.Console.exe.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,15 @@
+<h3>Matches: {$T.length}</h3>
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Age</th>
+	</tr>
+
+	{#foreach $T as match}
+		<tr>
+			<td>{$T.match.Name}</td>
+			<td>{$T.match.Age}</td>
+		</tr>
+	{#/for}
+</table>
