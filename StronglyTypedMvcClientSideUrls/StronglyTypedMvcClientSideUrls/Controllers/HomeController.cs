@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using Microsoft.Web.Mvc;
 
 namespace StronglyTypedMvcClientSideUrls.Controllers
 {
@@ -17,6 +18,7 @@ namespace StronglyTypedMvcClientSideUrls.Controllers
 			return View();
 		}
 
+		[AcceptAjax]
 		public string DoSomethingComplex(int id, string accountNumber, int amount)
 		{
 			return string.Format("id = {0}, accountNumber = {1}, amount = {2}", id, accountNumber, amount);
