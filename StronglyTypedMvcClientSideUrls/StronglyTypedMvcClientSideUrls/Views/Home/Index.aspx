@@ -10,19 +10,19 @@
 	<script src="/Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
 
 	<script type="text/javascript" language="javascript">
-String.prototype.replaceAll = function (patternToFind, replacementString) {
-	return this.replace(new RegExp(patternToFind, "gi"), replacementString);
-}
+		String.prototype.replaceAll = function (patternToFind, replacementString) {
+			return this.replace(new RegExp(patternToFind, "gi"), replacementString);
+		}
 
-String.prototype.substitute = function () {
-	var formatted = this;
+		String.prototype.substitute = function () {
+			var formatted = this;
 
-	for(var i = 0; i < arguments.length; i++) {
-		formatted = formatted.replaceAll("\\{" + i + "\\}", arguments[i]);
-	}
+			for(var i = 0; i < arguments.length; i++) {
+				formatted = formatted.replaceAll("\\{" + i + "\\}", arguments[i]);
+			}
 
-	return formatted;
-}
+			return formatted;
+		}
 
 		$(document).ready(function () {
 			// get these values from form fields or something...
