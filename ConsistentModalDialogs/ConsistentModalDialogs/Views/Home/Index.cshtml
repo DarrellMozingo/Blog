@@ -1,11 +1,81 @@
-﻿@{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+﻿<!DOCTYPE html>
 
-<script type="text/javascript">
+<html>
+	<head>
+		<title>Consistent Modals</title>
 
-</script>
+		<link href="@Url.Content("~/Content/themes/base/jquery-ui.css")" rel="stylesheet" type="text/css" />
+		<script src="@Url.Content("~/Scripts/jquery-1.4.4.min.js")" type="text/javascript"></script>
+		<script src="@Url.Content("~/Scripts/jquery-ui.min.js")" type="text/javascript"></script>
 
-<h2>Index</h2>
+		<style type="text/css">
+			.custom-ui-icon { float:left; margin-right:10px; }
+		</style>
 
+		<script type="text/javascript">
+			window.alert = function (message) {
+				$("#dialog")
+				.html("")
+				.html('<span class="ui-icon ui-icon-alert custom-ui-icon"></span>' + message)
+				.dialog({
+					autoOpen: true,
+					resizable: false,
+					height: 200,
+					width: 350,
+					title: "Alert!",
+					modal: true,
+					buttons: {
+						"OK": function () {
+							$(this).dialog("close");
+							return;
+						}
+					}
+				});
+			};
+
+			window.confirm = function(title, confirmMessage, successCallback) {
+				$("#dialog")
+					.html("")
+					.html('<span class="ui-icon ui-icon-help custom-ui-icon"></span>' + confirmMessage)
+					.dialog({
+							autoOpen: true,
+							resizable: false,
+							height: 200,
+							width: 350,
+							title: title,
+							modal: true,
+							buttons: {
+								"Yes": function() {
+									$(this).dialog("close");
+									successCallback();
+									return;
+								},
+								"No": function() {
+									$(this).dialog("close");
+									return;
+								}
+							}
+						});
+			};
+
+			$(document).ready(function () {
+				$("#makeAlert").click(function () {
+					alert("Something exploded!");
+				});
+
+				$("#makeConfirm").click(function () {
+					confirm("Are you sure?", "Are you sure you want to create a confirm?", function() {
+						alert("Sweet, all done!");
+					});
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<p><a href="javascript:;" id="makeAlert">Make an alert</a></p>
+		<p><a href="javascript:;" id="makeConfirm">Make a confirm</a></p>
+
+		<div id="dialog"></div>
+	</body>
+</html>
